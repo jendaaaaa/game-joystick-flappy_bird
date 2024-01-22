@@ -81,7 +81,7 @@ basic.forever(function () {
                 obstacle_empty = randint(0, 4);
                 for (let index = 0; index <= 4; index++) {
                     if (index != obstacle_empty) {
-                        let obstacle_new = game.createSprite(3, index);
+                        let obstacle_new = game.createSprite(4, index);
                         obstacle_new.set(LedSpriteProperty.Brightness, BRIGHTNESS_OBSTACLE);
                         Obstacles.push(obstacle_new);
                     }
@@ -177,10 +177,10 @@ function debounceButton() {
 function goFaster(tf : boolean = false){
     if (tf){
         interval_obstacle = interval_obstacle / 3;
-        interval_bird = interval_bird / 2;
+        interval_bird = interval_bird / 3;
     } else {
         interval_obstacle = interval_obstacle * 3;
-        interval_bird = interval_bird * 2;
+        interval_bird = interval_bird * 3;
     }
 }
 
