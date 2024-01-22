@@ -95,7 +95,7 @@ basic.forever(function () {
             }
             if (add_point){
                 game.setScore(game.score()+1);
-                if (game.score() - 1 % 5 == 0 && interval_obstacle > INTERVAL_LIMIT){
+                if (game.score() - 1 % 5 == 0 && interval_obstacle > INTERVAL_LIMIT && game.score() < 10){
                     interval_obstacle = interval_obstacle - INTERVAL_STEP_OBSTACLE;
                     interval_bird = interval_bird - INTERVAL_STEP_BIRD;
                 }
